@@ -35,4 +35,10 @@ public class Polynomial{
         return result;
     }
 
+    public boolean hasRoot(double d){
+        boolean result = evaluate(d) == 0;
+        return result;
+
+    }
+
 }
