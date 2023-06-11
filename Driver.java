@@ -21,15 +21,16 @@ public class Driver {
             System.out.println("1 is not a root of s");
         Polynomial m = p1.multiply(p2);
         System.out.println("m(2) = " + m.evaluate(2));
-        //Test File
-        File file = new File("Testpolynomial1.txt");
-        Polynomial testp1 = new Polynomial(file);
-        double teste = testp1.evaluate(2);
-        System.out.println("testp1(2)=" + teste);
+
         //Test saveToFile
         double[] c_stf = {6,5,1};
         int[] e_stf = {0,3,2};
         Polynomial p_stf = new Polynomial(c_stf,e_stf);
         p_stf.saveToFile("Test_savetofile");
+        //Test File
+        File file = new File("Test_savetofile");
+        Polynomial testp1 = new Polynomial(file);
+        double teste = testp1.evaluate(2);
+        System.out.println("testp1(2)=" + teste);
     }
 }
